@@ -32,6 +32,7 @@ public class MainClass extends LBUGraphics
                 	}
                 clear();
                 reset();
+                turnLeft();
                 penDown();
         }
        
@@ -39,49 +40,20 @@ public class MainClass extends LBUGraphics
         
         public void processCommand(String command)      //this method must be provided because LBUGraphics will call it when it's JTextField is used
         {
-    		//String parameter is the text typed into the LBUGraphics JTextfield
-            //lands here if return was pressed or "ok" JButton clicked
-            //TO DO 
         	
-        	command = command.toLowerCase();
-        	if(command.indexOf(" ") > -1)
-        	{
-        	String[] lines = command.split(" ");
-        	String cmd = lines[0];
-     
-        		try 
-        		{
-        		switch(cmd) 
-        			{
-    			
-    			case "forward":
-    				forward(lines[1]);
-    				break;
-    			case "backward":
-    				forward(lines[1]);
-    				break;
-        		case "turnright":
-        			turnRight(lines[1]);
+        	switch(command) {
+        		case "forward":
+        			forward(100);
         			break;
-        		case "turnleft":
-        			turnLeft(lines[1]);
+        		//case "forward";
+        			//forward();
+        			//break;
+        		case "right":
+        			turnRight();
         			break;
-        			}
-        		}
-        		catch(Exception e )
-        		{
-        			displayMessage("Invalid parameters");
-        		}
-        
-
-    			}	
-  
-        	else  
-        	{
-            	String[] lines = command.split(" ");
-            	String cmd = lines[0];
-        	
-    			switch(cmd) {
+        		case "left":
+        			turnLeft();
+        			break;
         		case "pen up":
         			penUp();
         			break;
@@ -106,18 +78,17 @@ public class MainClass extends LBUGraphics
         		case "white":
         			setPenColour(Color.WHITE);
         			break;
-        		case "about":
-        			about();
-        			break;
-        		case "":
-        			about();
-        			break;
-}
-}
-       
-        }
-        }
-        	    			
+
+        		
+        			
+        	}
+              
+        		
+        			
         	
-   
-        
+        	
+        		//String parameter is the text typed into the LBUGraphics JTextfield
+                //lands here if return was pressed or "ok" JButton clicked
+                //TO DO 
+        }
+}

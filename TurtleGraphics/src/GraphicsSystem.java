@@ -1,5 +1,5 @@
 
-public class GraphicsSystem 
+public class GraphicsSystem
 {
 
 }
