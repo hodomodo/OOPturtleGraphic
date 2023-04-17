@@ -1,5 +1,3 @@
-import java.awt.Color;
-
 import java.awt.FlowLayout;
 
 import javax.swing.JFrame;
@@ -45,9 +43,9 @@ public class MainClass extends LBUGraphics
         		case "forward":
         			forward(100);
         			break;
-        		//case "forward";
-        			//forward();
-        			//break;
+        		case "forward ";
+        			forward();
+        			break;
         		case "right":
         			turnRight();
         			break;
@@ -67,16 +65,16 @@ public class MainClass extends LBUGraphics
         			reset();
         			break;
         		case "black":
-        			setPenColour(Color.BLACK);
+        			setPenColour(0x000000);
         			break;
         		case "green":
-        			setPenColour(Color.GREEN);
+        			setPenColour(0x008000);
         			break;
         		case "red":
-        			setPenColour(Color.RED);
+        			setPenColour(0xFF0000);
         			break;
         		case "white":
-        			setPenColour(Color.WHITE);
+        			setPenColour(0xFFFFFF);
         			break;
 
         		
