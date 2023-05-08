@@ -1,0 +1,10 @@
+red
+forward 100
+green
+forward 100
+turnright 90
+forward 100
+turnright 90
+forward 100
+white
+forward 100
